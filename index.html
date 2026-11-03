@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Portfólio de Pedro Afonso, estudante de Ciência da Computação na UFAL e desenvolvedor back-end em formação.">
+        <meta name="theme-color" content="#0b0d12">
+        <title>Pedro Afonso | Portfólio</title>
+ 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="responsive.css">
+ 
+        <!-- Aplica o tema salvo antes da página renderizar (evita "flash" de tema errado) -->
+        <script>
+            (function () {
+                var root = document.documentElement;
+                root.classList.add("js");
+                var theme = null;
+                try { theme = localStorage.getItem("theme"); } catch (e) {}
+                if (theme !== "light" && theme !== "dark") {
+                    theme = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+                }
+                root.setAttribute("data-theme", theme);
+            })();
+        </script>
+    </head>
+    <body>
+        <a class="skip-link" href="#main">Pular para o conteúdo</a>
+        <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+ 
+        <!--CABEÇALHO-->
+        <header class="site-header" id="site-header">
+            <div class="header-inner">
+                <a class="brand" href="#home" aria-label="Pedro Afonso - ir para o início">
+                    <span class="brand-mark" aria-hidden="true">PA</span>
+                    <span class="brand-name">Pedro Afonso</span>
+                </a>
+ 
+                <nav aria-label="Principal" class="navbar" id="navbar">
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#about">Sobre</a></li>
+                        <li><a href="#skills">Habilidades</a></li>
+                        <li><a href="#project">Projetos</a></li>
+                        <li><a href="#education">Educação</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </nav>
+ 
+                <div class="header-actions">
+                    <button type="button" class="icon-button" aria-label="Alternar tema claro/escuro" id="theme-button">☀️</button>
+                    <button type="button" class="icon-button menu-button" id="menu-button" aria-label="Abrir menu" aria-expanded="false" aria-controls="navbar">
+                        <span class="menu-bars" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+ 
+        <!--CONTEÚDO PRINCIPAL-->
+        <main id="main">
+            <!--HOME-->
+            <section aria-label="Início" id="home" class="hero">
+                <div class="hero-glow" aria-hidden="true"></div>
+                <div class="container hero-inner">
+                    <div class="hero-text reveal">
+                        <p class="eyebrow">Desenvolvedor Back-end em formação</p>
+                        <p class="hero-greeting">Oi,&nbsp;<span id="greeting"></span>&nbsp;Seja bem-vindo ao meu Portfólio.</p>
+                        <h1>Eu sou <span class="gradient-text">Pedro Afonso</span></h1>
+                        <p class="hero-lead">Estudante de Ciência da Computação na Universidade Federal de Alagoas (UFAL), construindo aplicações bem estruturadas com Java, Spring Boot e Python.</p>
+                        <div class="hero-cta">
+                            <a href="#project" class="button button-primary">Ver projetos</a>
+                            <a href="#contact" class="button button-ghost">Entrar em contato</a>
+                        </div>
+                    </div>
+                    <div class="hero-photo reveal">
+                        <div class="photo-ring">
+                            <img src="foto_pessoal.JPG" alt="Foto de Pedro Afonso.">
+                        </div>
+                    </div>
+                </div>
+            </section>
+ 
+            <!--ABOUT-->
+            <section id="about" class="section">
+                <div class="container">
+                    <header class="section-head reveal">
+                        <p class="section-kicker">01</p>
+                        <h2>Sobre</h2>
+                    </header>
+                    <div class="about-grid reveal">
+                        <div class="about-text">
+                            <p>Sou desenvolvedor Back-end em formação, interessado na construção de aplicações e no desenvolvimento de soluções eficientes.</p>
+                            <p>Meu interesse pela tecnologia surgiu durante minha experiência como monitor de Robótica no Instituto Federal de Alagoas (IFAL), onde tive a oportunidade de aprofundar meu contato com a área e desenvolver minha curiosidade pela programação.</p>
+                            <p>Atualmente, estudo e aprimoro meus conhecimentos em Java, Spring Boot, Python, SQL e PostgreSQL. Também estou expandindo meus estudos para o desenvolvimento Web, explorando tecnologias como HTML, CSS e JavaScript.</p>
+                            <p>Além disso, tenho interesse em ampliar meus conhecimentos nas áreas de automação, Inteligência Artificial e Ciência de Dados, buscando explorar novas possibilidades e aplicações da tecnologia.</p>
+                            <p>Meu objetivo é evoluir continuamente como desenvolvedor, aprofundando meus conhecimentos em engenharia de software e aplicando-os na construção de aplicações bem estruturadas e soluções que tenham propósito.</p>
+                        </div>
+                        <aside class="about-side" aria-label="Interesses">
+                            <h3>Interesses</h3>
+                            <ul class="chips">
+                                <li>Engenharia de Software</li>
+                                <li>Automação</li>
+                                <li>Inteligência Artificial</li>
+                                <li>Ciência de Dados</li>
+                                <li>Robótica</li>
+                            </ul>
+                        </aside>
+                    </div>
+                </div>
+            </section>
+ 
+            <!--SKILLS-->
+            <section id="skills" class="section section-alt">
+                <div class="container">
+                    <header class="section-head reveal">
+                        <p class="section-kicker">02</p>
+                        <h2>Habilidades</h2>
+                    </header>
+                    <div class="skills-grid">
+                        <div class="skill-card reveal">
+                            <img src="code-solid-full.svg" alt="" class="skill-icon">
+                            <h3>Tecnologias</h3>
+                            <ul class="chips">
+                                <li>Java</li>
+                                <li>Spring Boot</li>
+                                <li>Python</li>
+                                <li>SQL</li>
+                                <li>PostgreSQL</li>
+                            </ul>
+                            <p class="skill-note">Em estudo: HTML, CSS e JavaScript</p>
+                        </div>
+                        <div class="skill-card reveal">
+                            <img src="user-group-solid-full.svg" alt="" class="skill-icon">
+                            <h3>Habilidades Pessoais</h3>
+                            <ul class="chips">
+                                <li>Comunicação</li>
+                                <li>Trabalho em equipe</li>
+                                <li>Adaptabilidade</li>
+                                <li>Aprendizado contínuo</li>
+                                <li>Resolução de problemas</li>
+                                <li>Pensamento lógico</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+ 
+            <!-- PROJECTS -->
+            <section id="project" class="section">
+                <div class="container">
+                    <header class="section-head reveal">
+                        <p class="section-kicker">03</p>
+                        <h2>Projetos</h2>
+                    </header>
+ 
+                    <div class="filters reveal" role="group" aria-label="Filtrar projetos por categoria">
+                        <button type="button" class="filter active" data-filter="all" aria-pressed="true">Todos</button>
+                        <button type="button" class="filter" data-filter="extension" aria-pressed="false">Extensão</button>
+                        <button type="button" class="filter" data-filter="teaching" aria-pressed="false">Ensino</button>
+                        <button type="button" class="filter" data-filter="personal" aria-pressed="false">Projetos Pessoais</button>
+                    </div>
+ 
+                    <div class="projects">
+                        <!-- EXTENSION PROJECTS -->
+                        <article class="project-card reveal" data-category="extension">
+                            <span class="project-category">Extensão</span>
+                            <h3>Robótica Educacional e Internet das Coisas como Ferramentas de Transformação Social</h3>
+                            <p>Ensino de robótica para alunos de escolas de Ensino Fundamental, com o objetivo de promover a inclusão digital e capacitar estudantes com pouco contato com a tecnologia.</p>
+                            <ul class="chips chips-small">
+                                <li>Robótica</li>
+                                <li>IoT</li>
+                                <li>Inclusão digital</li>
+                            </ul>
+                        </article>
+ 
+                        <!-- TEACHING PROJECTS -->
+                        <article class="project-card reveal" data-category="teaching">
+                            <span class="project-category">Ensino</span>
+                            <h3>Promovendo a Interdisciplinaridade nos Cursos Técnicos Integrados do IFAL Campus Arapiraca por meio da Robótica Educacional</h3>
+                            <p>Ensino de robótica utilizando o microcontrolador Arduino e a linguagem C++, atendendo alunos dos cursos técnicos de Informática e Eletroeletrônica do Campus Arapiraca.</p>
+                            <ul class="chips chips-small">
+                                <li>Arduino</li>
+                                <li>C++</li>
+                            </ul>
+                        </article>
+ 
+                        <!-- PERSONAL PROJECTS -->
+                        <article class="project-card reveal" data-category="personal">
+                            <span class="project-category">Projetos Pessoais</span>
+                            <h3>Sistema de Biblioteca com Python e Flask</h3>
+                            <p>Desenvolvimento de uma API com Python e Flask, com aplicação do padrão arquitetural Singleton. O projeto tem como foco a criação de endpoints, implementação de regras de negócio, tratamento de exceções e utilização do padrão arquitetural MVC, com adaptações para uma arquitetura em camadas.</p>
+                            <ul class="chips chips-small">
+                                <li>Python</li>
+                                <li>Flask</li>
+                                <li>API REST</li>
+                                <li>MVC</li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+            </section>
+ 
+            <!-- EDUCATION -->
+            <section id="education" class="section section-alt">
+                <div class="container">
+                    <header class="section-head reveal">
+                        <p class="section-kicker">04</p>
+                        <h2>Formação Acadêmica</h2>
+                    </header>
+                    <div class="education-container">
+                        <article class="education-card reveal">
+                            <p class="period"><time datetime="2021">2021</time> - <time datetime="2023">2023</time></p>
+                            <h3>Instituto Federal de Alagoas (IFAL)</h3>
+                            <p class="course">Técnico em Eletroeletrônica</p>
+                            <p class="description">Formação técnica com conhecimentos em componentes eletrônicos, eletricidade, motores elétricos e utilização de microcontroladores em sistemas embarcados.</p>
+                        </article>
+ 
+                        <article class="education-card reveal">
+                            <p class="period"><time datetime="2025">2025</time> - <time datetime="2029">2029</time> (Previsão de conclusão)</p>
+                            <h3>Universidade Federal de Alagoas (UFAL)</h3>
+                            <p class="course">Bacharelado em Ciência da Computação</p>
+                            <p class="description">Graduação em andamento, com conhecimentos adquiridos em lógica de programação, direito digital, estruturas de dados, programação orientada a objetos (POO) e banco de dados.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+ 
+            <!-- CONTACT -->
+            <section id="contact" class="section">
+                <div class="container">
+                    <div class="contact-card reveal">
+                        <p class="section-kicker">05</p>
+                        <h2>Vamos conversar?</h2>
+                        <p class="contact-lead">Estou aberto a oportunidades, projetos e trocas de conhecimento. Fale comigo por um dos canais abaixo.</p>
+                        <div class="contacts">
+                            <a href="mailto:peedrro999@gmail.com" class="button button-primary">E-mail</a>
+                            <a href="https://www.linkedin.com/in/pedro-afonso-bb869b372" target="_blank" rel="noopener noreferrer" class="button button-ghost">LinkedIn</a>
+                            <a href="https://github.com/PedroAfonso10" target="_blank" rel="noopener noreferrer" class="button button-ghost">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+ 
+        <footer class="site-footer">
+            <div class="container footer-inner">
+                <p>&copy; 2026 Pedro Afonso. Todos os direitos reservados.</p>
+                <a href="#home" class="to-top-link">Voltar ao topo ↑</a>
+            </div>
+        </footer>
+ 
+        <button type="button" class="back-to-top" id="back-to-top" aria-label="Voltar ao topo">↑</button>
+ 
+        <script src="script.js"></script>
+    </body>
+</html>
